@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/beo1259/WDS-Overhaul-2023#readme",
   "dependencies": {
+    "@google-cloud/translate": "^8.0.2",
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
     "express": "^4.18.2",
+    "express-fileupload": "^1.4.3",
     "mysql2": "^3.6.5",
     "node-gyp": "^10.0.1"
   }

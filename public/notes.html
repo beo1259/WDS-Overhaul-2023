@@ -12,6 +12,7 @@
   <div class="navbar">
     <div class="pages">
       <a href="index.html">HOME <img class="navbar-icons" alt="Home Section" src="assets/home.png"/></a>
+      <button class="logout">LOGOUT</button>
     </div>
   </div>
   
@@ -19,7 +20,7 @@
       <aside class="sidebar">
           <div class="sidebar-header">
               <h2>Files</h2>
-              <button class="add-file-btn">+</button>
+              <button class="add-file-btn">New File +</button>
           </div>
           <nav class="file-list">
               <!-- File items will be dynamically added here -->
@@ -27,24 +28,78 @@
       </aside>
 
       <main class="note-editor">
-        <textarea class="note-input" id="noteInput" placeholder="Start writing..."></textarea>
-        <button class="btn save-note-btn" id="saveNoteButton">Save Note</button>
-    </main>
+        <input type="hidden" id="currentFileName" value="" /> <!-- Hidden input to track the current file -->
+        <div class="input-with-button">
+          <textarea class="note-input" id="noteInput" placeholder="Start writing..."></textarea>
+          <button id="startSpeechToText" class="speech-btn">Start Dictation</button>
+          <button id="readNoteContentButton" class="speech-btn">Read Note</button>
+          <button class="btn save-note-btn" id="saveNoteButton">Save Note</button>
+        <button class="btn delete-note-btn" id="deleteNoteButton">Delete Note</button>
+      </div>
+      
+        
+       
+        
+        <div class="note-editor" id="translationResult">Translated text...</div>
+
+
+        <div class="translation-controls" class="translation-controls">
+         
+          <select id="languageSelect">
+
+
+            <option value="zh-CN">Chinese (Simplified)</option>
+            <option value="zh-TW">Chinese (Traditional)</option>
+            <option value="nl">Dutch</option>
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="el">Greek</option>
+            <option value="he">Hebrew</option>
+            <option value="hi">Hindi</option>
+            <option value="ga">Irish</option>
+            <option value="it">Italian</option>
+            <option value="ja">Japanese</option>
+            <option value="ko">Korean</option>
+            <option value="la">Latin</option>
+            <option value="ms">Malay</option>
+            <option value="fa">Persian</option>
+            <option value="pl">Polish</option>
+            <option value="pt">Portuguese</option>
+            <option value="ru">Russian</option>
+            <option value="es">Spanish</option>
+            <option value="sw">Swahili</option>
+            <option value="sv">Swedish</option>
+            <option value="tl">Tagalog</option>
+            <option value="ta">Tamil</option>
+            <option value="th">Thai</option>
+            <option value="tr">Turkish</option>
+            <option value="uk">Ukrainian</option>
+            <option value="ur">Urdu</option>
+            <option value="vi">Vietnamese</option>
+        </select>
+        <button class="translate-note-btn" id="readTranslationButton">Read Translation</button>
+
+
+          </div>
+
+      </main>
   </div>
 
   <footer class="main-footer">
       <!-- Footer content (e.g., copyright, links) -->
   </footer>
 
+  <script src="notes.js"></script>
   <script src="script.js"></script>
+  
   <div class="font-resize-controls">
     <button onclick="changeFontSize(-1)" aria-label="Decrease font size">A-</button>
     <button onclick="changeFontSize(1)" aria-label="Increase font size">A+</button>
     <button onclick="resetFontSize()" aria-label="Reset font size">Reset</button>
-</div>
+  </div>
 
-
-<button class="tts-button" id="readAloudButton"><img src="assets/tts.png" alt="Text-to-speech Button"/> </button>
-<button class="image-button" onclick="toggleNavbarImages()" id="toggleImagesBtn"><img src="assets/image.png" alt="Toggle Images Button"/></button>
+  <button class="tts-button" id="readAloudButton"><img src="assets/tts.png" alt="Text-to-speech Button"/> </button>
+  <button class="image-button" onclick="toggleNavbarImages()" id="toggleImagesBtn"><img src="assets/image.png" alt="Toggle Images Button"/></button>
 </body>
 </html>

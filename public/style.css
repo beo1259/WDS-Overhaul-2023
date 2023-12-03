@@ -30,7 +30,6 @@ body {
 
 .image-button:hover {
     background-color: #7D7DF7;
-    /* Color change on hover */
 }
 
 .image-button img {
@@ -42,7 +41,6 @@ body {
     height: 7%;
     width: 3.5%;
     background-color: #111b47;
-    /* Default background color */
     border: none;
     color: white;
     padding: 1vh;
@@ -59,7 +57,6 @@ body {
     height: 7%;
     width: 3.5%;
     background-color: #111b47;
-    /* Default background color */
     border: none;
     color: white;
     padding: 1vh;
@@ -74,7 +71,6 @@ body {
 
 .tts-button:hover {
     background-color: #7D7DF7;
-    /* Color change on hover */
 }
 
 .tts-button img {
@@ -136,8 +132,8 @@ body {
     display: flex;
     justify-content: space-between;
     letter-spacing: 0.05rem;
-    position: relative; /* Needed for absolute positioning of pseudo-elements */
-    border-bottom: 0.3rem solid var(--link-color); /* Your desired border */
+    position: relative; 
+    border-bottom: 0.3rem solid var(--link-color); 
 }
 
 
@@ -219,7 +215,7 @@ body {
 
 .title>.title {
     font-size: 6em;
-    font-family: 'Roboto';
+    font-family: 'SFPRO';
 }
 
 .title>img {
@@ -285,7 +281,13 @@ body {
 }
 
 .navbar img {
-    display: none; /* Hide images initially */
+    display: none; 
+}
+
+.icon{
+    padding-left: 10px;
+    height: 20px;
+    width: 20px;
 }
 
 
@@ -569,7 +571,16 @@ body {
     height: calc(100vh - 128px);
 }
 
-
+.splash-reverse-files {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    z-index: -1;
+    position: fixed;
+    margin-right: 65%;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+}
 
 .phone {
     z-index: 10;
@@ -603,6 +614,7 @@ body {
 
 .copy {
     font-family: 'sfpro';
+    font-size: 0.5em;
     position: fixed;
     bottom: 6px;
     left: 12px;
@@ -633,6 +645,7 @@ body {
 }
 
 .sidebar {
+    background-color: white;
     height: calc(100% - 48px);
     width: 20%;
     border-right: 1px solid var(--border);
@@ -804,8 +817,6 @@ textarea {
     width: 20vh;
     margin-bottom: 1rem;
 }
-
-
 
 h1 {
     font-family: 'sfpro', sans-serif;
@@ -1096,14 +1107,8 @@ html {
     padding-top: 4%;
     display: flex;
     min-height: 90vh;
-}
-
-/* Sidebar Styles */
-.sidebar {
-    width: 20%;
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px;
+    max-height: 100vh;
+    
 }
 
 .sidebar-header {
@@ -1122,36 +1127,252 @@ html {
     cursor: pointer;
 }
 
-.file-list {
-    list-style: none;
-    padding: 0;
+.sidebar {
+    height: 100%; 
+    display: flex;
+    flex-direction: column; 
 }
 
-/* Note Editor Styles */
+.file-list {
+    flex: 1; 
+    overflow-y: auto; 
+}
+
+.file-list div {
+    border-bottom: 1px solid #ccc; 
+    padding: 8px 0;
+}
+
+.file-list div:last-child {
+    border-bottom: none; 
+}
+
 .note-editor {
-    width: 80%;
+    width: 78%;
     padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 3px solid #505F98;
+    display: flex;
+    flex-direction: column;
+}
+
+.logout{
+    margin-right: 300px !important;
+    font-family: 'sfpro';
+    font-size: 1.3em;
+    background-color: transparent;
+    border: none;
+    color: #111b47;
+    font-weight: 800;
 }
 
 .note-input {
-    width: 100%;
-    height: 80vh;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    margin-top: 0; 
+    font-family: 'sfpro';
+    width: 99%;
+    height: 50vh;
     border: none;
     padding: 10px;
-    font-size: 16px;
+    font-size: 2em;
     line-height: 1.5;
     resize: none;
+    background-color: rgba(0, 0, 0, 0.15);
+    margin-bottom: 1%;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.04);
 }
 
-/* Header and Footer */
-.main-header, .main-footer {
+
+.editor-controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.editor-top-controls {
+    align-self: flex-end; 
+    margin-bottom: 8px; 
+  }
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+#translationResult {
+    width: 82%;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    min-height: 100px;
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+#languageSelect {
+    color: white;
+    font-family: 'sfpro';
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #111b47;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.translation-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align to the start of the container */
+}
+
+.main-footer {
     text-align: center;
     padding: 10px 0;
     background-color: #34495e;
     color: white;
 }
 
-/* Utility Classes */
-.hidden {
-    display: none;
+.font-resize-controls button {
+    background-color: #0074d9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
 }
+
+.tts-button,
+.image-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0074d9;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.translation-button{
+    height: 300px;
+    font-family: 'sfpro';
+    font-size: 1.1em;
+    margin-top: 5px;
+    color: white;
+    background-color: #111b47;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 4px;
+}
+
+.tts-button img,
+.image-button img {
+    width: 100%;
+    height: 100%;
+}
+
+.save-note-btn{
+    margin-top: 2px;
+    margin-top: -60px;
+    margin-left: 133vh;
+    width: 15%;
+    font-family: 'sfpro';
+    font-size: 1.1em;
+    color: white;
+    background-color: #111b47;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 4px;
+}
+
+.delete-note-btn{
+    margin-left: 138vh;
+    display: block;
+    height: 5%;
+    font-family: 'sfpro';
+    font-size: 1.1em;
+    margin-top: 5px;
+    color: red;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.speech-btn{
+    margin-top: 8px;
+    font-family: 'sfpro';
+    font-size: 1.3em;
+    font-family: 'sfpro';
+    font-size: 1em;
+    color: white;
+    background-color: #111b47;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 4px;
+    width: 10%;
+    height: 10%;
+}
+
+.dictation-controls, .translation-controls {
+    margin-top: 10px; 
+}
+
+.controls-row {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+}
+
+.language-dropdown {
+    flex-grow: 0;
+}
+
+.translate-note-btn{
+    width: 15%;
+    height: 42px;
+    margin-left: 10px;
+    font-family: 'sfpro';
+    font-size: 1.1em;
+    margin-top: 5px;
+    color: white;
+    background-color: #111b47;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 4px;
+}
+

@@ -17,6 +17,9 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
     })
     .then(response => response.text())
     .then(data => {
+        localStorage.setItem('username', username);
+        localStorage.setItem('password', password);
+        window.location.href = 'notes.html';
         alert(data); // Show response from the server
     })
     .catch(error => {
