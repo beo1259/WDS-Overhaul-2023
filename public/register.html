@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>InkLink</title>
+    <title>InkLink - Register</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="assets/link.png" type="image/x-icon">
-  </head>
-  <body>
-    <div class="navbar">
-        <div class="pages">
-          <img src="assets/logo.png" alt="logo">
-          <a href="index.html">Home</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="teams.html">For Teams</a>
-          <a href="individuals.html">For Individuals</a>
-          <a href="mission.html">Mission</a>
+</head>
+<body>
+  <div class="navbar">
+    <div class="pages">
+
+      <a href="index.html" class='active'>HOME</a>
+
+    </div>
+  </div>
+    <div class="login-container">
+        <div class="login-header">
+          <h1 class="join-title">Join InkLink!</h1>
         </div>
-        <div class="general">
-          <a href="help.html">Help</a>
-          <a href="login.html">Login</a>
-          <a href="download.html" class="btn">Download</a>
-        </div>
-      </div>
-    <div class="main">
+        <div class="main">
         <form class="login_form" id="signupForm">
           <input type="text" name="username" placeholder="Username...">
           <input type="password" name="password" placeholder="Password...">
           <input type="submit" value="Sign Up">
       </form>
-
-      <script src="signupscript.js"></script>
+        <div class="login-footer">
+            <p>Already have an account? <a href="login.html">Log In</a></p>
+            <a href="help.html" class="help-link">Need help?</a>
+        </div>
     </div>
-  </body>
+    <div class="font-resize-controls">
+      <button onclick="changeFontSize(-1)" aria-label="Decrease font size">A-</button>
+      <button onclick="changeFontSize(1)" aria-label="Increase font size">A+</button>
+      <button onclick="resetFontSize()" aria-label="Reset font size">Reset</button>
+  </div>
+</body>
+<button class="tts-button" id="readAloudButton"><img src="assets/tts.png"/>Text-to-speech</button>
+<script src="signupscript.js"></script>
 </html>

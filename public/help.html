@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>InkLink - Help</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="assets/link.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="pages">
+            <a href="index.html" >HOME <img class="navbar-icons" alt="Home Section" src="assets/home.png"/></a>
+            <a href="pricing.html">PRICING <img class="navbar-icons" alt="Pricing Section" src="assets/dollar.png"/></a>
+            <a href="teams.html">FOR TEAMS <img class="navbar-icons" alt="For Teams Section" src="assets/team.png"/></a>
+            <a href="individuals.html">FOR INDIVIDUALS <img class="navbar-icons" alt="For Individuals Section" src="assets/individual.png"/></a>
+            <a href="mission.html">MISSION <img class="navbar-icons" alt="Mission Section" src="assets/mission.png"/></a>
+        </div>
+        <div class="general">
+            <a href="help.html"  class='active'>HELP <img class="navbar-icons" alt="Help Section" src="assets/help.png"/></a>
+            <a href="login.html">LOGIN <img class="navbar-icons" alt="Login Section" src="assets/login.png"/></a>
+            <a href="download.html" class="download">Download <img class="navbar-icons" alt="Download App" src="assets/download.png"/></a>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="content-section">
+            <h1>Help & Support</h1>
+            <p>Find answers to your questions or get in touch with our support team.</p>
+
+            <div class="help-topics">
+                <div class="help-topic" id="gettingStartedBtn">
+                    <h2>Getting Started</h2>
+                    <p>Learn the basics and start using InkLink effectively.</p>
+                </div>
+
+                <div class="help-topic"  id="accountManagementModal">
+                    <h2>Account Management</h2>
+                    <p>Manage your account settings, subscriptions, and more.</p>
+                </div>
+
+                <div class="help-topic" id="troubleshootingModal">
+                    <h2>Troubleshooting</h2>
+                    <p>Common issues and how to resolve them.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="gettingStartedModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Getting Started</h2>
+              <p>Here is some information about getting started with our service...</p>
+            </div>
+          </div>
+      
+          <div id="accountManagementModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Getting Started</h2>
+              <p>Here is some information about getting started with our service...</p>
+            </div>
+          </div>
+      
+          <div id="troubleshootingModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Getting Started</h2>
+              <p>Here is some information about getting started with our service...</p>
+            </div>
+          </div>
+      
+
+    </div>
+
+    <script src="script.js"></script>
+    <button class="tts-button" id="readAloudButton"><img src="assets/tts.png" /> </button>
+    <button class="image-button" onclick="toggleNavbarImages()" id="toggleImagesBtn"><img src="assets/image.png" alt="Toggle Images Button"/></button>
+    <img src="assets/splash-img.png" class="splash" />
+    <img src="assets/splash-img.png" class="splash" />
+    <img src="assets/splash-img.png" class="splash-reverse" />
+    <img src="assets/splash-img.png" class="splash-reverse" />
+</body>
+
+</html>

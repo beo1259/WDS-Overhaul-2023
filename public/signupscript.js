@@ -23,3 +23,4 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
         console.error('Error:', error);
     });
 });
+

@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>InkLink</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="assets/link.png" type="image/x-icon">
-  </head>
-  <body>
-    <div class="navbar">
-        <div class="pages">
-          <img src="assets/logo.png" alt="logo">
-          <a href="index.html">Home</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="teams.html">For Teams</a>
-          <a href="individuals.html">For Individuals</a>
-          <a href="mission.html">Mission</a>
-        </div>
-        <div class="general">
-          <a href="help.html">Help</a>
-          <a href="index.html" class="logout">Logout</a>
-          <a href="download.html" class="btn">Download</a>
-        </div>
-      </div>
-    <div class="notes_main">
-        <div class="sidebar">
-            <div class="top">
-                <span>Files</span>
-                <button class="add_file">+</button>
-            </div>
-            <div class="files">
-
-            </div>
-        </div>
-        <div class="notes">
-            <textarea name="writing" cols="30" rows="10" class="writing"></textarea>
-        </div>
+</head>
+<body>
+  <div class="navbar">
+    <div class="pages">
+      <a href="index.html">HOME <img class="navbar-icons" alt="Home Section" src="assets/home.png"/></a>
     </div>
-  </body>
+  </div>
+  
+  <div class="container">
+      <aside class="sidebar">
+          <div class="sidebar-header">
+              <h2>Files</h2>
+              <button class="add-file-btn">+</button>
+          </div>
+          <nav class="file-list">
+              <!-- File items will be dynamically added here -->
+          </nav>
+      </aside>
+
+      <main class="note-editor">
+        <textarea class="note-input" id="noteInput" placeholder="Start writing..."></textarea>
+        <button class="btn save-note-btn" id="saveNoteButton">Save Note</button>
+    </main>
+  </div>
+
+  <footer class="main-footer">
+      <!-- Footer content (e.g., copyright, links) -->
+  </footer>
+
   <script src="script.js"></script>
+  <div class="font-resize-controls">
+    <button onclick="changeFontSize(-1)" aria-label="Decrease font size">A-</button>
+    <button onclick="changeFontSize(1)" aria-label="Increase font size">A+</button>
+    <button onclick="resetFontSize()" aria-label="Reset font size">Reset</button>
+</div>
+
+
+<button class="tts-button" id="readAloudButton"><img src="assets/tts.png" alt="Text-to-speech Button"/> </button>
+<button class="image-button" onclick="toggleNavbarImages()" id="toggleImagesBtn"><img src="assets/image.png" alt="Toggle Images Button"/></button>
+</body>
 </html>

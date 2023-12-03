@@ -13,25 +13,31 @@
 <body>
     <div class="navbar">
         <div class="pages">
-            <a href="index.html">HOME</a>
-            <a href="pricing.html">PRICING</a>
-            <a href="teams.html" class="active">FOR TEAMS</a>
-            <a href="individuals.html">FOR INDIVIDUALS</a>
-            <a href="mission.html">MISSION</a>
+            <a href="index.html">HOME <img class="navbar-icons" alt="Home Section" src="assets/home.png" /></a>
+            <a href="pricing.html">PRICING <img class="navbar-icons" alt="Pricing Section"
+                    src="assets/dollar.png" /></a>
+            <a href="teams.html" class='active'>FOR TEAMS <img class="navbar-icons" alt="For Teams Section"
+                    src="assets/team.png" /></a>
+            <a href="individuals.html">FOR INDIVIDUALS <img class="navbar-icons" alt="For Individuals Section"
+                    src="assets/individual.png" /></a>
+            <a href="mission.html">MISSION <img class="navbar-icons" alt="Mission Section"
+                    src="assets/mission.png" /></a>
         </div>
         <div class="general">
-            <a href="help.html">HELP</a>
-            <a href="login.html">LOGIN</a>
-            <a href="download.html" class="download">Download</a>
+            <a href="help.html">HELP <img class="navbar-icons" alt="Help Section" src="assets/help.png" /></a>
+            <a href="login.html">LOGIN <img class="navbar-icons" alt="Login Section" src="assets/login.png" /></a>
+            <a href="download.html" class="download">Download <img class="navbar-icons" alt="Download App"
+                    src="assets/download.png" /></a>
         </div>
     </div>
     <div class="main">
         <div class="content-section">
             <h1>Empowering Teams</h1>
             <p>INKLINK; Connecting Teams with Accessibility at Heart</p>
-            
+
             <h2>Collaborative Note-Taking</h2>
-            <p>Discover how InkLink bridges the gap between team members with and without impairments. Our collaborative tools ensure that everyone can contribute equally, regardless of language or disability.</p>
+            <p>Discover how InkLink bridges the gap between team members with and without impairments. Our collaborative
+                tools ensure that everyone can contribute equally, regardless of language or disability.</p>
 
             <h2>Features Tailored for Teams</h2>
             <ul>
@@ -42,11 +48,12 @@
             </ul>
 
             <h2>Training and Support</h2>
-            <p>Our commitment extends beyond software. We offer training and resources to help teams understand and embrace accessibility in their daily workflow.</p>
+            <p>Our commitment extends beyond software. We offer training and resources to help teams understand and
+                embrace accessibility in their daily workflow.</p>
 
             <h2>Custom Solutions for Your Organization</h2>
             <p>Contact us to discuss how InkLink can be tailored to fit the unique needs of your organization.</p>
-            
+
             <button class="btn contact-btn">Contact Our Team</button>
         </div>
     </div>
@@ -54,7 +61,14 @@
     <div class="font-resize-controls">
         <button onclick="changeFontSize(-1)" aria-label="Decrease font size">A-</button>
         <button onclick="changeFontSize(1)" aria-label="Increase font size">A+</button>
+        <button onclick="resetFontSize()" aria-label="Reset font size">Reset</button>
     </div>
+    <button class="tts-button" id="readAloudButton"><img src="assets/tts.png" /> </button>
+    <button class="image-button" onclick="toggleNavbarImages()" id="toggleImagesBtn"><img src="assets/image.png" alt="Toggle Images Button"/></button>
+    <img src="assets/splash-img.png" class="splash" />
+    <img src="assets/splash-img.png" class="splash" />
+    <img src="assets/splash-img.png" class="splash-reverse" />
+    <img src="assets/splash-img.png" class="splash-reverse" />
 </body>
 
 </html>
