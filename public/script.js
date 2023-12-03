@@ -615,7 +615,6 @@ startSpeechToTextBtn.addEventListener('click', handleLiveSpeechToTextAndTranslat
 
 document.getElementById('readNoteContentButton').addEventListener('click', readNoteContent);
 
-
 function readNoteContent() {
     let textToRead = document.getElementById('noteInput').value;
     if (textToRead.trim() === "") {
